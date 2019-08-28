@@ -10,7 +10,9 @@ func GetConnString(user, pass, host, port, dbName string) string {
 	return user + ":" + pass + "@tcp(" + host + ":" + port + ")/" + dbName + "?charset=utf8mb4,utf8&parseTime=true&sql_mode=ansi"
 }
 
+// Include Database
 func WithDatabase(conn string, entities ...interface{}) gaarx.Option {
+	// TODO: get rid of mySQL
 	return func(app *gaarx.App) error {
 		db, err := gorm.Open(
 			"mysql",
