@@ -1,9 +1,9 @@
 package database
 
 import (
-	"github.com/gaarx/gaarx"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
+	gaarx "github.com/zergu1ar/Gaarx"
 )
 
 func GetConnString(user, pass, host, port, dbName string) string {
