@@ -11,11 +11,10 @@ func GetConnString(user, pass, host, port, dbName string) string {
 }
 
 // Include Database
-func WithDatabase(conn string, entities ...interface{}) gaarx.Option {
-	// TODO: get rid of mySQL
+func WithDatabase(conn string, dbType string, entities ...interface{}) gaarx.Option {
 	return func(app *gaarx.App) error {
 		db, err := gorm.Open(
-			"mysql",
+			dbType,
 			conn,
 		)
 		if err != nil {
