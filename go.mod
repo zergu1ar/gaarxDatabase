@@ -9,6 +9,6 @@ replace github.com/golang/lint => github.com/golang/lint v0.0.0-20190227174305-8
 replace layeh.com/radius => github.com/layeh/radius v0.0.0-20190118135028-0f678f039617
 
 require (
-	github.com/zergu1ar/Gaarx v0.1.8
+	github.com/zergu1ar/Gaarx v1.0.0
 	github.com/jinzhu/gorm v1.9.10
 )
